@@ -1,12 +1,16 @@
+import ArticleList from "@/app/ui/articlelist"
+
 export default function Home() {
   return (
-    <div className='h-screen grid grid-cols-3 gap-4 container mx-auto'>
+    <div className='grid grid-cols-3 gap-4 container mx-auto'>
       <header className='col-span-3'>
         Text Header
       </header>
 
         <main className='col-span-2 row-start-2'>
-          This is the main area.
+          <ArticleList>
+
+          </ArticleList>
         </main>
         <aside className='col-start-3 row-start-2'>
           This is the side bar.
