@@ -7,7 +7,7 @@ export default async function ArticleList() {
 		<div>
 			{topposts.map((post: Post) => (
 				<div
-				className=""
+				className="p-10"
 				key={post.id}
 				>
 					<h3 className="text-xl">
