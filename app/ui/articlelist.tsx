@@ -1,22 +1,19 @@
 import { GetTopPosts } from "../lib/data"
 import { Post } from "@/app/lib/definitions"
+import ArticleCard from "./articlecard"
 
 export default async function ArticleList() {
 	const topposts = await GetTopPosts()
 	return (
-		<div>
+		<div className="flex flex-col justify-center items-center gap-8">
 			{topposts.map((post: Post) => (
-				<div
-				className="p-10"
+				<ArticleCard
 				key={post.id}
-				>
-					<h3 className="text-xl">
-						{post.title}
-					</h3>
-					<div><p>{post.body}</p></div>
-					<div><p>{post.createdAt}</p></div>
-					<div><p>{post.author}</p></div>
-				</div>
+				title={post.title}
+				body={post.body}
+				createdAt={post.createdAt}
+				author={post.author}
+				/>	
 			))}
 		</div>
 	)
