@@ -1,3 +1,5 @@
+export const api_string = "https://65a3e0daa54d8e805ed42278.mockapi.io/api/"
+
 export async function GetTopPosts () {
 	try {
 		const url = new URL('https://65a3e0daa54d8e805ed42278.mockapi.io/api/posts')

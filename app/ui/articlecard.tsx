@@ -17,7 +17,7 @@ export default function ArticleCard({ title, body, createdAt, author }: Props) {
                 <p className="text-gray-700 leading-tight mb-4 line-clamp-3">
                     {body}
                 </p>
-                <div>Read more</div>
+                <div className="readmore">Read more</div>
                 <div className="flex justify-between items-center">
                     <div className="flex items-center">
                         <Image src="https://randomuser.me/api/portraits/men/32.jpg" width={128} height={128} alt="Avatar" className="w-8 h-8 rounded-full mr-2 object-cover"/>
