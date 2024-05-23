@@ -18,12 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='grid grid-cols-2 md:grid-cols-3 gap-4 container mx-auto'>
-          <header className='md:col-span-3 col-span-2 bg-white'>
+        <div className='grid grid-cols-3 md:grid-cols-4 gap-4 container mx-auto'>
+          <header className='md:col-span-4 col-span-3 bg-white'>
             <NavMenu></NavMenu>
           </header>
         {children}
-          <footer className='row-start-3 md:col-span-3 col-span-2'>
+          <footer className='row-start-5 md:col-span-4 col-span-3'>
             This is the footer.
           </footer>
         </div>

@@ -12,6 +12,12 @@ module.exports = {
 			hostname: 'randomuser.me',
 			port: '',
 			pathname:'**'
+		},
+		{
+			protocol: 'https',
+			hostname: 'placehold.jp',
+			port: '',
+			pathname: '**'
 		}
 	  ],
 	},

@@ -1,12 +1,16 @@
-import { GetTopPosts } from "../lib/data"
+import getTag from "@/app/lib/getTag"
 import { Post } from "@/app/lib/definitions"
 import ArticleCard from "./articlecard"
 
-export default async function ArticleList() {
-	const topposts = await GetTopPosts()
+
+
+export default async function Tag({ params: { slug }}: any) {
+
+	const tag = await getTag(slug)
+
 	return (
 		<div className="flex flex-col justify-center items-center gap-8">
-			{topposts.map((post: Post) => (
+			{tag.map((post: Post) => (
 				<ArticleCard
 				key={post.id}
 				name={post.id}
@@ -17,5 +21,6 @@ export default async function ArticleList() {
 				/>	
 			))}
 		</div>
+		
 	)
 }
